@@ -1,17 +1,11 @@
-import { useState } from "react";
+const SearchBar = ({search, handleSearch}) => {
 
-const SearchBar = () => {
-    const [searchBar, setSearchBar] = useState("");
-
-    const handleSearchBar = (event) => {
-        setSearchBar(event.target.value)
-    }
 
     return (
         <div>
         <h2>Search</h2>
         <form>
-        <input type="search" name="SearchBar" value={searchBar} onChange={handleSearchBar} />
+        <input type="search" name="SearchBar" value={search} onChange={handleSearch} />
         </form>
          </div>
     )

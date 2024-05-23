@@ -1,10 +1,26 @@
 import ProductRow from "./ProductRow";
 
-const ProductTable = () => {
+const ProductTable = ({allProducts}) => {
 
-    //Criar a tabela com os produtos na product table
+    
     return (
-    <ProductRow />
+        <table>
+<thead>
+<tr>
+    <th>name</th>
+    <th>price</th>
+</tr>
+</thead>
+<tbody>
+
+{allProducts.map(singleProduct => {
+    return <ProductRow key={singleProduct.id} product={singleProduct}/>
+
+})}
+
+</tbody>
+</table>
+
 
     );
 };
